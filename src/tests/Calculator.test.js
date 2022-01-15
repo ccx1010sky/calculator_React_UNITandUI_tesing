@@ -61,5 +61,20 @@ describe("Calculator", () => {
     expect(runningTotal.text()).toEqual("15");
   });
 
+  it("should do  21 % 7 and get 3", () => {
+    const button2 = container.find("#number2");
+    button2.simulate("click");
+    const button1 = container.find("#number1");
+    button1.simulate("click");
+    const divideButton = container.find("#operator-divide");
+    divideButton.simulate("click");
+    const button7 = container.find("#number7");
+    button7.simulate("click");
+    const equalsButton = container.find("#operator-equals");
+    equalsButton.simulate("click");
+    const runningTotal = container.find("#running-total");
+    expect(runningTotal.text()).toEqual("3");
+  });
+
   
 });
